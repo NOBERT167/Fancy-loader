@@ -1,0 +1,46 @@
+body{
+    margin: 0px;
+    padding: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+.loader{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    margin: -75px 0 0 -75px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #f4b41a;
+    border-bottom: 16px solid #143d59;
+    animation: spin 2s linear infinite;
+}
+@keyframes spin {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.content{
+    display: none;
+    text-align: center;
+}
+#animate-bottom{
+    position: relative;
+    animation: animatebottom 2s ease-in-out;
+}
+@keyframes animatebottom {
+    0%{
+        bottom: -100px;
+        opacity: 0;
+    }
+    100%{
+        bottom: 0;
+        opacity: 1;
+    }
+}
